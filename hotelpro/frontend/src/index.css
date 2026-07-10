@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* postcss-custom: @theme is valid Tailwind v4 syntax */
+@theme {
+  --color-luxury-gold: #C9A86A;
+  --color-midnight-navy: #0F172A;
+  --color-dark-black: #080B12;
+  --color-accent-teal: #5EEAD4;
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--color-dark-black);
+  color: #f1f5f9;
+  font-family: var(--font-body);
+}
+
+/* Style native <select> dropdown options to match the dark theme.
+   Browsers render the open option list using OS-level styling by default,
+   which ignores Tailwind classes on the <select> itself. */
+select option {
+  background-color: var(--color-midnight-navy);
+  color: #f1f5f9;
+}
